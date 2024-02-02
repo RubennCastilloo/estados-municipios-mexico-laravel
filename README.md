@@ -2,7 +2,16 @@
 
 Migraciones de estados, municipios y tabla pivote para unir ambos, así como también los Seeders para insertar los datos a través de Laravel.
 
-Comando para correr el Seeder, se requiere que se encuentre referenciado en DataBaseSeeder.php
+Se requiere que se encuentre referenciado en DataBaseSeeder.php de la siguiente manera
+```php
+$this->call(StateSeeder::class);
+$this->call(CitySeeder::class);
+$this->call(StateCitySeeder::class)
+```
+Comando para ejecutar el Seeder
 ```sh
 php artisan db:seed
 ```
+
+
+
